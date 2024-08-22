@@ -1,0 +1,22 @@
+{
+  "$schema": "https://inlang.com/schema/marketplace-manifest",
+  "id": "plugin.inlang.otter",
+  "icon": "https://cdn.jsdelivr.net/gh/opral/monorepo@main/inlang/source-code/plugins/t-function-matcher/assets/t.png",
+  "displayName": {
+    "en": "Otter"
+  },
+  "description": {
+    "en": "Enables the inlang Visual Studio Code extension (Sherlock) to work with otter i18n functions"
+  },
+  "pages": {
+    "/": "./inlang/source-code/plugins/t-function-matcher/README.md",
+    "/changelog": "./inlang/source-code/plugins/t-function-matcher/CHANGELOG.md"
+  },
+  "keywords": ["go", "golang", "templ"],
+  "recommends": ["m/r7kp499g", "m/3i8bor92"],
+  "publisherName": "Martin Munilla",
+  "publisherIcon": "https://inlang.com/favicon/safari-pinned-tab.svg",
+  "website": "https://manage.inlang.com/install?module=plugin.inlang.tFunctionMatcher",
+  "license": "Apache-2.0",
+  "module": "https://cdn.jsdelivr.net/npm/@inlang/plugin-t-function-matcher@latest/dist/index.js"
+}
