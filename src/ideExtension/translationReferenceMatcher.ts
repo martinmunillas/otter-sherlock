@@ -18,7 +18,7 @@ export function parse(sourceCode: string): {
   let match;
 
   while ((match = functionCallRegex.exec(sourceCode)) !== null) {
-    const messageId = match[2]!;
+    const messageId = match[3]!;
     const start = sourceCode.slice(0, match.index).split("\n");
     const end = sourceCode.slice(0, functionCallRegex.lastIndex).split("\n");
 
