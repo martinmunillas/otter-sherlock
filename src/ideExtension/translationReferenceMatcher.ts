@@ -12,13 +12,13 @@ export function parse(sourceCode: string): {
   };
 }[] {
   const functionCallRegex =
-    /\bi18n\.T\s*\(\s*(ctx|r.Context\(\))\s*,\s*(['"])(.*?)\2\s*\)/g;
+    /\bi18n\.(?:T|Translation)\s*\(\s*(?:ctx|r.Context\(\))\s*,\s*(['"])(.*?)\1\s*\)/g;
 
   const matches = [];
   let match;
 
   while ((match = functionCallRegex.exec(sourceCode)) !== null) {
-    const messageId = match[3]!;
+    const messageId = match[2]!;
     const start = sourceCode.slice(0, match.index).split("\n");
     const end = sourceCode.slice(0, functionCallRegex.lastIndex).split("\n");
 
