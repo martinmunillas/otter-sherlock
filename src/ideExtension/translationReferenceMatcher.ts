@@ -12,7 +12,7 @@ export function parse(sourceCode: string): {
   };
 }[] {
   const functionCallRegex =
-    /\bi18n\.T\s*\(\s*(ctx|r.Context\(\))\s*,\s*(['"])(.*?)\1\s*\)/g;
+    /\bi18n\.T\s*\(\s*(ctx|r.Context\(\))\s*,\s*(['"])(.*?)\2\s*\)/g;
 
   const matches = [];
   let match;
