@@ -14,13 +14,19 @@ export const ideExtensionConfig = (): ReturnType<
       {
         callback: (args: { messageId: string }) => ({
           messageId: args.messageId,
-          messageReplacement: `{ i18n.T(ctx, "${args.messageId}") }`,
+          messageReplacement: `@i18n.T(ctx, "${args.messageId}")`,
         }),
       },
       {
         callback: (args: { messageId: string }) => ({
           messageId: args.messageId,
-          messageReplacement: `i18n.T(ctx, "${args.messageId}")`,
+          messageReplacement: `{ i18n.Translation(ctx, "${args.messageId}") }`,
+        }),
+      },
+      {
+        callback: (args: { messageId: string }) => ({
+          messageId: args.messageId,
+          messageReplacement: `i18n.Translation(ctx, "${args.messageId}")`,
         }),
       },
       {
